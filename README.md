@@ -68,7 +68,7 @@ config/config.yaml      resource names, gates, asset versions
                         app.yml    — the app:   test → build → deploy
 azure-pipelines.yml     unused; equivalent definition for Azure DevOps teams
 tests/                  unit tests (run in CI, no Azure needed)
-docs/                   ARCHITECTURE.md, DEMO_GUIDE.md
+docs/                   ARCHITECTURE.md, BUILD_FROM_ZERO.md, DEMO_GUIDE.md
 ```
 
 ## The inference layer

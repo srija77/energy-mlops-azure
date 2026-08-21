@@ -16,6 +16,7 @@ and what to say. **You do not need anything else on this page to run the demo.**
 | Document | Read it when | Length |
 |---|---|---|
 | **[DEMO_GUIDE.md](DEMO_GUIDE.md)** | **You are giving the demo.** The only one you need. | 13 parts |
+| [BUILD_FROM_ZERO.md](BUILD_FROM_ZERO.md) | You are rebuilding the stack from an empty subscription, or want the one command for a single step | 12 phases |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | You want the local-stack → Azure-service mapping, and the data flow diagram | short |
 | [01_PROVISIONED_RESOURCES.md](01_PROVISIONED_RESOURCES.md) | You need the live resource inventory, quota limits, or the teardown commands | short |
 
@@ -44,3 +45,7 @@ current system — they described "ingestion skipped" (the pipeline used to star
 hand-uploaded parquet) and a `@champion` alias that **Azure ML does not support**.
 Following them would have led you into two failures we already fixed.
 They remain in git history if you need them.
+
+**Not to be confused with [BUILD_FROM_ZERO.md](BUILD_FROM_ZERO.md)**, which is new and
+current. It deliberately does *not* reuse the old `RUNBOOK.md` filename, so that a
+search for the deleted document cannot surface the replacement and vice versa.
