@@ -165,10 +165,17 @@ stages:
                       fi
                       echo "Champion resolved to $(modelName):$VERSION"
 
-                      az ml online-deployment create \
-                        -f aml/endpoints/deployment.yml \
-                        --set model=azureml:$(modelName):$VERSION \
-                        --all-traffic
+                      # create fails once the deployment exists, so update on later runs
+                      if az ml online-deployment show -n champion -e $(endpointName) >/dev/null 2>&1; then
+                        az ml online-deployment update \
+                          -f aml/endpoints/deployment.yml \
+                          --set model=azureml:$(modelName):$VERSION
+                      else
+                        az ml online-deployment create \
+                          -f aml/endpoints/deployment.yml \
+                          --set model=azureml:$(modelName):$VERSION \
+                          --all-traffic
+                      fi
                 - task: AzureCLI@2
                   displayName: Smoke test endpoint
                   inputs:

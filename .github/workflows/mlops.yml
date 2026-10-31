@@ -140,8 +140,14 @@ jobs:
       - name: Deploy champion
         run: |
           az configure --defaults group=$RESOURCE_GROUP workspace=$WORKSPACE
-          az ml online-deployment create -f aml/endpoints/deployment.yml \
-            --set model=azureml:$MODEL:${{ steps.champion.outputs.version }} --all-traffic
+          # create fails once the deployment exists, so update on later runs
+          if az ml online-deployment show -n champion -e $ENDPOINT >/dev/null 2>&1; then
+            az ml online-deployment update -f aml/endpoints/deployment.yml \
+              --set model=azureml:$MODEL:${{ steps.champion.outputs.version }}
+          else
+            az ml online-deployment create -f aml/endpoints/deployment.yml \
+              --set model=azureml:$MODEL:${{ steps.champion.outputs.version }} --all-traffic
+          fi
 
       - name: Smoke test the endpoint
         run: |
