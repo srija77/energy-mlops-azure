@@ -77,7 +77,7 @@ providers before provisioning, secrets before deploys, roles before both.
 Set these once and reuse them:
 
 ```powershell
-$RG="rg-energy-mlops"; $LOC="eastus"; $WS="mlw-energy-forecast"
+$RG="rg-energy-mlops"; $LOC="eastus"; $WS="mlw-energy-forecast-v2"
 $SUB="<your-subscription-id>"
 ```
 

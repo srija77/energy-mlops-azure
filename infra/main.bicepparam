@@ -1,7 +1,7 @@
 using './main.bicep'
 
 param baseName = 'energy'
-param workspaceName = 'mlw-energy-forecast'
+param workspaceName = 'mlw-energy-forecast-v2'
 param computeClusterName = 'cpu-cluster'
 // Standard_DS2_v2 = 2 vCPUs. This subscription's quota is 4 Total Regional vCPUs
 // and 4 Standard DSv2 Family vCPUs, so DS3_v2 (4 vCPUs) would consume the whole

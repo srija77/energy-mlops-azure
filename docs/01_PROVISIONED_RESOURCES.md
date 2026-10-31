@@ -33,7 +33,7 @@ a fresh subscription needs this before anything deploys):
 | 2 | Key Vault | `kv-energy-<SUFFIX>` | standard, RBAC | Secrets / connection strings |
 | 3 | Application Insights | `appi-energy-<SUFFIX>` | web | Job + endpoint telemetry |
 | 4 | Container Registry | `acrenergy<SUFFIX>` | Standard | AML environment + endpoint images |
-| 5 | Azure ML workspace | `mlw-energy-forecast` | Basic, SystemAssigned identity | MLOps control plane |
+| 5 | Azure ML workspace | `mlw-energy-forecast-v2` | Basic, SystemAssigned identity | MLOps control plane |
 | 6 | Compute cluster | `cpu-cluster` | **Standard_DS2_v2**, 0→2 nodes | Runs the pipeline (scales to 0) |
 
 ## AML control-plane assets
@@ -60,8 +60,8 @@ a fresh subscription needs this before anything deploys):
 
 ## Studio links
 
-- **Workspace:** https://ml.azure.com/?wsid=/subscriptions/<SUBSCRIPTION_ID>/resourcegroups/rg-energy-mlops/workspaces/mlw-energy-forecast&tid=<TENANT_ID>
-- **Pipeline run:** https://ml.azure.com/runs/olive_moon_llsz5zb736?wsid=/subscriptions/<SUBSCRIPTION_ID>/resourcegroups/rg-energy-mlops/workspaces/mlw-energy-forecast&tid=<TENANT_ID>
+- **Workspace:** https://ml.azure.com/?wsid=/subscriptions/<SUBSCRIPTION_ID>/resourcegroups/rg-energy-mlops/workspaces/mlw-energy-forecast-v2&tid=<TENANT_ID>
+- **Pipeline run:** https://ml.azure.com/runs/olive_moon_llsz5zb736?wsid=/subscriptions/<SUBSCRIPTION_ID>/resourcegroups/rg-energy-mlops/workspaces/mlw-energy-forecast-v2&tid=<TENANT_ID>
 
 ## Cost notes
 

@@ -11,7 +11,7 @@ azure:
   resource_group: "rg-energy-mlops"
   location: "eastus"
   # Azure ML workspace (the MLOps hub — tracking + registry + endpoints live here)
-  workspace_name: "mlw-energy-forecast"
+  workspace_name: "mlw-energy-forecast-v2"
   # Managed compute cluster used by the training pipeline
   compute_cluster: "cpu-cluster"
   # Azure Container Registry (created with the workspace by Bicep)

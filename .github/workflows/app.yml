@@ -195,7 +195,7 @@ jobs:
           # points at whatever the model pipeline actually deployed.
           az extension add -n ml -y
           SCORING_URI=$(az ml online-endpoint show -n $ENDPOINT \
-            -g $RESOURCE_GROUP -w mlw-energy-forecast --query scoring_uri -o tsv)
+            -g $RESOURCE_GROUP -w mlw-energy-forecast-v2 --query scoring_uri -o tsv)
           echo "Scoring URI: $SCORING_URI"
 
           URL=$(az deployment group create \

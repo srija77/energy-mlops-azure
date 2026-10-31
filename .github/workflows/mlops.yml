@@ -33,7 +33,7 @@ on:
 
 env:
   RESOURCE_GROUP: rg-energy-mlops
-  WORKSPACE: mlw-energy-forecast
+  WORKSPACE: mlw-energy-forecast-v2
   ENDPOINT: dam-mcp-endpoint
   MODEL: dam_mcp_forecast
 

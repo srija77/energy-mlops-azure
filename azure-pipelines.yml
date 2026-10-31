@@ -17,7 +17,7 @@
 #     Contributor + AzureML Data Scientist on the resource group.
 #   - Variable group `energy-mlops` containing:
 #       resourceGroup   e.g. rg-energy-mlops
-#       workspaceName   e.g. mlw-energy-forecast
+#       workspaceName   e.g. mlw-energy-forecast-v2
 #       alertEmail      mailbox that receives drift alerts
 #   - Environment `energy-prod` with a required approver (the Deploy gate).
 # ============================================================================

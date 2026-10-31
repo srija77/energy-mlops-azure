@@ -17,7 +17,7 @@ param baseName string = 'energy'
 param location string = resourceGroup().location
 
 @description('Name of the Azure ML workspace.')
-param workspaceName string = 'mlw-energy-forecast'
+param workspaceName string = 'mlw-energy-forecast-v2'
 
 @description('Name of the CPU compute cluster.')
 param computeClusterName string = 'cpu-cluster'

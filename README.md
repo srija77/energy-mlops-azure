@@ -98,7 +98,7 @@ az login
 
 # 3. Register AML assets and run the training pipeline
 az extension add -n ml -y
-az configure --defaults group=rg-energy-mlops workspace=mlw-energy-forecast
+az configure --defaults group=rg-energy-mlops workspace=mlw-energy-forecast-v2
 az ml environment create -f aml/environment/train-env.yml
 az ml compute create      -f aml/compute.yml
 az ml data create         -f aml/data_asset.yml
